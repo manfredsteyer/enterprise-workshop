@@ -14,10 +14,9 @@ export class HomeComponent implements OnInit {
   _userName: string = '';
 
   ngOnInit() {
-    this.route.params
-      .subscribe(
-        params => this.needsLogin = !!params['needsLogin']
-      );
+    this.route.params.subscribe(
+      params => (this.needsLogin = !!params['needsLogin'])
+    );
   }
 
   get userName(): string {
